@@ -1,0 +1,35 @@
+<% include header %>
+
+<div class="container">
+
+    
+    <div class="jumbotron">
+        <div class="display-4">Welcome to YelpCamp</div>
+        <div class="lead">THis is some bullshit alwayes needed to be written</div>
+        <p class="lead mt-2">
+                <a href="/campground/new" class="btn btn-primary ">Add a new campground site</a>
+        </p>
+        
+    </div>
+    
+
+    
+    <div class="card-columns row">
+            <% sites.forEach(function(site){ %>
+                <div class=" col-md-6 col-lg-4">
+                        <div class="card" style="display:flex; flex-direction:column;">
+                                <img src="<%= site.img %>" alt="" class="card-img-top ">
+                                <div class="card-title text-center"> <%= site.name %></div>
+                                <p style="align-self:center;">
+                                        <a href="campground/<%=site._id%>" class="btn btn-primary">More Info</a>
+                                </p>
+                        </div> 
+                </div>
+                
+            <%});%>
+    </div>
+
+
+</div>
+
+<% include footer %>

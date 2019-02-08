@@ -1,0 +1,19 @@
+<% include ../campgrounds/header %>
+
+<h1 class="text-center mb-3">Create a New Comment for <%=campground.name%></h1>
+<form action="/campground/<%=campground._id%>/comments" method="POST">
+    <div class="row mb-3" style="margin-left:33.33%">
+        <input type="text" placeholder="author" name="comment[author]" class="form-control col-6">
+    </div>
+    <div class="row mb-3" style="margin-left:33.33%">
+        <input type="text" placeholder="text" name="comment[text]" class="form-control col-6">
+    </div>
+    
+
+    <div class="row" style="margin-left:33.33%">
+        <button class="btn btn-primary btn-block col-6" >submitt</button>
+    </div>
+    
+</form>
+
+<% include ../campgrounds/footer %>
